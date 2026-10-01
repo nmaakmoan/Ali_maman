@@ -9,24 +9,23 @@ const attemptsDisplay = document.getElementById('attempts');
 
 guessBtn.addEventListener('click', function() {
     let guess = parseInt(guessInput.value);
-    
+
     if (isNaN(guess) || guess < 1 || guess > 100) {
         feedback.textContent = 'Please enter a valid number between 1 and 100';
         return;
     }
-    
+
     attempts++;
     attemptsDisplay.textContent = attempts;
-    
-    // BUG: Feedback messages are backwards!
+
     if (guess === secretNumber) {
-        feedback.textContent = 'Too high! Try again.';
+        feedback.textContent = 'Congratulations! You got it!';
     } else if (guess < secretNumber) {
         feedback.textContent = 'Too low! Try again.';
     } else {
-        feedback.textContent = 'Congratulations! You got it!';
+        feedback.textContent = 'Too high! Try again.';
     }
-    
+
     guessInput.value = '';
 });
 
