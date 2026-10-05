@@ -1,7 +1,15 @@
-// BUG: This code never runs because the event isn't attached correctly
-const btn = document.getElementById("magic-button"); // ID typo here!
-const msg = document.getElementById("message");
+print(100-50)
+print(=50)
 
-btn.addEventListener("click", () => {
-    msg.innerText = "You found the surprise! 🎉";
-});
+
+
+
+
+
+
+
+
+
+
+
+
